@@ -9,9 +9,9 @@ Skill - Details
 @section('content')
   <div class="content-header">
     <div class="title">
-      <h1>Development Method {{$skill->name}} Details</h1>
+      <h1>Skill {{$skill->name}} Details</h1>
     </div>
-    <a href="{{url('timefortalent/development-method')}}"><button type="button" class="primary">Back</button></a>
+    <a href="{{url('timefortalent/skill')}}"><button type="button" class="primary">Back</button></a>
   </div>
   <table class="striped bordered">
     <tbody>

@@ -4,9 +4,12 @@
   <div class="title">
     <h1>Edit Development Method</h1>
   </div>
+  <a href="{{url('timefortalent/development-method')}}">
+    <button type="button" class="primary">Back</button>
+  </a>
 </div>
 
-<form class="reset-form" action="{{Request::url()}}" method="post">
+<form action="{{Request::url()}}" method="post">
   <input type="hidden" name="_token" value="{{csrf_token()}}">
   <div>
     <span class="error">

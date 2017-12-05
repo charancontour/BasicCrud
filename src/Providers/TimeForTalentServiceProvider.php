@@ -36,6 +36,11 @@ class TimeForTalentServiceProvider extends ServiceProvider
 			'TimeForTalent\Repositories\Skill\SkillInterface',
 			'TimeForTalent\Repositories\Skill\SkillRepository'
 		);
+
+		$this->app->bind(
+			'TimeForTalent\Repositories\Resource\ResourceInterface',
+			'TimeForTalent\Repositories\Resource\ResourceRepository'
+		);
 	}
 
 }

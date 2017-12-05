@@ -2,9 +2,9 @@
 @section('content')
 <div class="content-header">
   <div class="title">
-    <h1>Edit Skill</h1>
+    <h1>Edit Resource</h1>
   </div>
-  <a href="{{url('timefortalent/skill')}}">
+  <a href="{{url('timefortalent/resource')}}">
     <button type="button" class="primary">Back</button>
   </a>
 </div>
@@ -16,7 +16,7 @@
       <?php echo $errors->first('name', '* :message'); ?>
      </span>
      <label>Name</label>
-     <input type="text" name="name" value="{{ $skill->name }}">
+     <input type="text" name="name" value="{{ $resource->name }}">
   </div>
 
   <br/>
@@ -25,7 +25,7 @@
       <?php echo $errors->first('description', '* :message'); ?>
      </span>
      <label>Description :</label>
-     <textarea name="description" rows="8" cols="80">{{$skill->description}}</textarea>
+     <textarea name="description" rows="8" cols="80">{{$resource->description}}</textarea>
   </div>
 
   <button type="submit" class="primary">Save</button>

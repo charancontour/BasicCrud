@@ -2,21 +2,21 @@
 @section('content')
 <div class="content-header">
   <div class="title">
-    <h1>Edit Skill</h1>
+    <h1>Create Resource</h1>
   </div>
-  <a href="{{url('timefortalent/skill')}}">
+  <a href="{{url('timefortalent/resource')}}">
     <button type="button" class="primary">Back</button>
   </a>
 </div>
 
-<form action="{{Request::url()}}" method="post">
+<form  action="{{Request::url()}}" method="post">
   <input type="hidden" name="_token" value="{{csrf_token()}}">
   <div>
     <span class="error">
       <?php echo $errors->first('name', '* :message'); ?>
      </span>
      <label>Name</label>
-     <input type="text" name="name" value="{{ $skill->name }}">
+     <input type="text" name="name" value="{{ old('name') }}">
   </div>
 
   <br/>
@@ -25,7 +25,7 @@
       <?php echo $errors->first('description', '* :message'); ?>
      </span>
      <label>Description :</label>
-     <textarea name="description" rows="8" cols="80">{{$skill->description}}</textarea>
+     <textarea name="description" rows="8" cols="80">{{ old('description') }}</textarea>
   </div>
 
   <button type="submit" class="primary">Save</button>
